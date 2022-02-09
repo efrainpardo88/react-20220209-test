@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const SUBSCRIPTION_KEY = '3d5ef4248f594a53a24c0436d24078dd';
+const SUBSCRIPTION_KEY = '';
 const urlBase = 'https://api.bing.microsoft.com';
 
 /**
