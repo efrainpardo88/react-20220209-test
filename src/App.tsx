@@ -3,8 +3,17 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Bing from './components/pages/bing/Bing';
 import Home from './components/pages/home/Home';
 import MainLayout from './components/pages/layout/main-layout/MainLayout';
+import { useAppDispatch } from './store/hooks';
+import { setPageTitle } from './store/slices/PageTitleSlice';
 
-function NoMatch() {
+function NoMatch(props: any) {
+  // Set Title Page to browser
+  const { titlePage } = props;
+  if (titlePage) {
+    const dispatch = useAppDispatch();
+    dispatch(setPageTitle(titlePage));
+  }
+
   return (
     <div>
       <h2>It looks like you&apos;re lost...</h2>
@@ -25,16 +34,25 @@ function App() {
         >
           <Route
             index
-            element={<Home />}
+            element={<Home titlePage="Home" />}
           />
           <Route
             path="bing"
-            element={<Bing />}
+            element={<Bing titlePage="Bing Search" />}
           />
           <Route
             path="*"
-            element={<NoMatch />}
+            element={<NoMatch titlePage="Not Found Page" />}
           />
+          {/* Here we can add protected routes
+          <Route
+            path="/protected"
+            element={
+              <RequireAuth>
+                <ProtectedPage />
+              </RequireAuth>
+            }
+          /> */}
         </Route>
       </Routes>
     </div>

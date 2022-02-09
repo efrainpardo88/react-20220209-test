@@ -25,5 +25,13 @@ module.exports = {
   ],
   rules: {
     'react/jsx-props-no-spreading': 'off',
+    'spaced-comment': [2, 'always', { markers: ['/'], 'exceptions': ['*'] }],
+    'linebreak-style': 0,
+    'no-param-reassign': ['error', {
+      props: true,
+      ignorePropertyModificationsFor: [
+        'state',
+      ]
+    }],
   }
 };

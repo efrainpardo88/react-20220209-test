@@ -2,8 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Bing from './Bing';
 
-test('renders learn react link', () => {
-  render(<Bing />);
-  const linkElement = screen.getByText(/learn react/i);
+test('renders Bing title', () => {
+  render(<Bing titlePage="Bing Search" />);
+  const linkElement = screen.getByText(/BING/i);
   expect(linkElement).toBeInTheDocument();
 });
