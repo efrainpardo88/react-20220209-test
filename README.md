@@ -1,6 +1,14 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is being developed as a Test Demo of my own React knowledge React and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) as it is a small project. [Create React App](https://github.com/facebook/create-react-app) has a useful advantage like setup the necessary things to a quick start project with react. One of the drawbacks could be don't have an optional setup. To advance projects and development, the best way to create a React app is start with a custom installation to an easier configuration.
+
+This app has the following features:
+
+- Typescript to type definitions
+- ESLint to code validation, code styling and Git hooks
+- Airbnb Typescript style guide
+- React Router to implement Layouts, navigation and guards if is necessary
+- Material UI
 
 ## Available Scripts
 
